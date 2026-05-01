@@ -59,6 +59,7 @@ The following loss functions were evaluated:
 ---
 
 ## Results
+### Unet
 
 ### Epoch-wise Performance (Dice Loss)
 
@@ -81,7 +82,45 @@ The results show consistent improvement as training progresses.
 
 Dice Loss achieves better performance due to its ability to directly optimize overlap and handle class imbalance.
 
+### Attention Unet
+## Epoch-wise Training Loss
+
+| Epoch | Loss |
+|------|------|
+| 0 | 1.1061 |
+| 1 | 0.8704 |
+| 2 | 0.6584 |
+| 3 | 0.5637 |
+| 4 | 0.5327 |
+| 5 | 0.5048 |
+| 6 | 0.4734 |
+| 7 | 0.4637 |
+| 8 | 0.4551 |
+| 9 | 0.4404 |
+
+The training loss shows a consistent decrease across epochs, indicating stable learning and effective convergence of the model.
+
 ---
+
+## Validation Performance
+
+| Metric | Score |
+|--------|------|
+| Dice Score | 0.8268 |
+| IoU Score  | 0.7094 |
+
+The model demonstrates strong segmentation performance on the validation set, with good overlap between predicted masks and ground truth.
+
+---
+
+## Observations
+
+- Steady loss reduction confirms stable training  
+- Dice score above 0.82 indicates strong segmentation quality  
+- IoU above 0.70 shows reliable region overlap  
+- Model generalizes well to unseen data  
+---
+
 
 ## Visualization
 
