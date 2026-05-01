@@ -35,6 +35,12 @@ A U-Net model is implemented with:
 - Skip connections for spatial information preservation  
 - Binary segmentation output  
 
+An Attention U-Net model is implemented with:
+- Encoder-decoder architecture  
+- Skip connections integrated with attention gates  
+- Attention mechanism to suppress irrelevant regions and highlight salient features  
+- Enhanced feature propagation between encoder and decoder  
+- Binary segmentation output 
 ---
 
 ### Loss Functions
@@ -45,9 +51,16 @@ The following loss functions were evaluated:
 ---
 
 ### Training
+- Model: U-Net  
 - Optimizer: Adam  
 - Learning rate: 1e-3  
 - Epochs: 3  
+- Batch size: 8
+  
+- Model: Attention U-Net  
+- Optimizer: Adam for efficient gradient optimization  
+- Learning rate: 1e-3  
+- Epochs: 10  
 - Batch size: 8  
 
 ---
@@ -115,10 +128,18 @@ The model demonstrates strong segmentation performance on the validation set, wi
 
 ## Observations
 
+For U-net
 - Steady loss reduction confirms stable training  
 - Dice score above 0.82 indicates strong segmentation quality  
 - IoU above 0.70 shows reliable region overlap  
-- Model generalizes well to unseen data  
+- Model generalizes well to unseen data
+
+For Attention U-net
+- The training loss shows a steady decrease from 1.1061 to 0.4404, indicating stable learning and effective convergence of the Attention U-Net model  
+- The use of attention gates improves feature selection by focusing on relevant regions and suppressing irrelevant background information  
+- A Dice score of 0.8268 reflects strong segmentation performance with accurate boundary prediction  
+- An IoU score of 0.7094 indicates reliable overlap between predicted masks and ground truth  
+- The model demonstrates good generalization capability on unseen validation data  
 ---
 
 
