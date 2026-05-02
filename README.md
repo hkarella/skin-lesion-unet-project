@@ -190,6 +190,18 @@ python evaluate_checkpoints.py
 python compare_predictions.py
 
 
+### How to run the Attention U-net
+
+You can find the tranined model code for you to run and train it (attentionUnet_training.ipynb)
+
+If you wish to run the model without training, you can download the pretrained Attention U-Net model here:
+[Download Model](https://drive.google.com/file/d/1m31Y2i9oyqGIB2E8ajIoP3cnxf4oP0XC/view?usp=sharing) (best_model.pth)
+
+Combine best_model.pth and attentionUnet.py file (which acts as main.py for this attentionUnet model) add in your sample
+skin lesion image and run it. 
+
+Sample output for the Attention U-net is presented in the output.png file.
+
 ---
 
 ## Conclusion
